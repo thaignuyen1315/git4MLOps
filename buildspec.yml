@@ -1,35 +1,35 @@
-# Tutorial to YAML file coding
-my-course: "MLOps with AWS using YAML"
-version: 1.0
-price: 199
-is_public: false
-release_date: 2025-06-13
-pre_enroll: null
-category:
- - AWS
- - DevOPS
- - MLOps Certification
-course_dev: ["Thai", "Nguyen", "Chino"]
-dev_details:
- - name: "Thai"
-   email: "mr.chino@yahoo.com"
-   role: "Engineer"
- - name: "Nguyen"
-   email: "dr.china@yahoo.com"
-   role: "DevOps"
- - name: "Chino"
-   email: "prof.chine@yahoo.com"
-   role: "MLOps"
- - {name: "Thai", email: "mr.chino@yahoo.com", role: "Engineer"}
+version: 0.2
 
-short_description: >
- This is a course for
- AWS DevOps MLOps Professional
- Certification and Engineer
+env:
+ variables:
+  MY_AWS_REGION: "us-east-1"
 
-detailed_description: |
- This is a course has been
- created with the special
- guests and hope you would
- like the course a lot!
 
+phases:
+ install:
+  runtime-versions:
+  nodejs: 12
+  commads:
+   - echo "Running on $MY_AWS_REGION"
+   - echo "Print Environment Variables"
+   - echo "Start the installation process"
+   - echo "Installation Process Complated"
+
+  pre_build:
+   commads:
+    - echo "This is the start of Pre-Build phase"
+    - echo "Pre0Build phase is now completed"
+
+  build:
+   commands: 
+    - echo "we are currently on build phase"
+    - echo "Build Activity is completed"
+    - echo "Run Basic check whether Website is ready for use"
+    - grep -Fq "AWS Certified DevOps Engineer" index.html
+    - echo "Test was successful"
+    - echo "proceed with next steps"
+
+  post-build:
+   commands:
+    - echo "We are currently on post_build phasse"
+    - echo "post_build phase activity is completed. Moving next to AI"
