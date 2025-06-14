@@ -2,7 +2,7 @@ version: 0.2
 
 env:
     variables:
-        MY_AWS_REGION: "ap-south-1"
+        MY_AWS_REGION: "us-east-1"
 
 
 phases: 
