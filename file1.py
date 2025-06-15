@@ -1,1 +1,1 @@
-print("MLOps Project AWS v4")
+print("MLOps Project AWS v8")
